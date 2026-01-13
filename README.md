@@ -31,9 +31,18 @@ npm run dev
 ```
 前端將啟動於: `http://localhost:5173`
 
+### 3. Vercel 部署 (Serverless)
+本專案已設定 `vercel.json`，支援一鍵部署至 Vercel。
+*   **前端**：自動打包 `frontend` 目錄。
+*   **後端**：自動轉發 `/api` 請求至 `api/index.py` (FastAPI)。
+
+## 更新日誌 (Latest Updates)
+*   **2026-01-13**: 新增 PDF 財報解析功能、修復 Vercel 404 路由問題 (詳見 [CHANGELOG.md](./CHANGELOG.md))。
+
 ## 專案結構
 ```text
 ValuSight/
+├── api/               # Vercel Serverless Entry
 ├── frontend/          # React 前端應用
 └── backend/           # FastAPI 後端應用
 ```
