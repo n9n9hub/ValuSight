@@ -16,6 +16,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from app.api import upload
+
+app.include_router(upload.router, prefix="/api", tags=["Upload"])
+
 @app.get("/health")
 async def health_check():
     return {"status": "ok", "message": "ValuSight API 正在運行中"}
